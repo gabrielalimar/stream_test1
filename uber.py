@@ -9,7 +9,7 @@ DATA_URL = ("https://s3-us-west-2.amazonaws.com/"
 DATE_COLUMN = "date/time"
 def load_data (nrows):
            data=pd.read_csv(DATA_URL,nrows=nrows)
-           lowercaselamda X: str(x).lower()
+           lowercase=lambda X: str(x).lower()
            data.rename(lowercase,axis="columns",inplace=True)
            data[DATA_COLUMN]=pd.to_datetime(data[DATE_COLUMN]) 
            return data
